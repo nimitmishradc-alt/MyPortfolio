@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nimit Mishra | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="loader" id="loader">
+        <div class="loader-inner">
+            <div class="loader-ring"></div>
+            <div class="loader-text"><span>N</span><span>I</span><span>M</span><span>I</span><span>T</span></div>
+        </div>
+    </div>
+
+    <canvas id="particles"></canvas>
+
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+    <canvas id="cursorTrail"></canvas>
+
+    <div class="bg">
+        <div class="orb o1"></div>
+        <div class="orb o2"></div>
+        <div class="orb o3"></div>
+    </div>
+
+    <nav class="nav">
+        <a href="#" class="logo"><svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+            </svg><span>NIMIT</span></a>
+        <div class="nav-menu" id="navMenu">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+        <div class="nav-actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5" />
+                    <path
+                        d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                </svg>
+                <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                </svg>
+            </button>
+            <a href="mailto:nimitmishradc@gmail.com" class="nav-cta">Let's Talk<svg viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg></a>
+        </div>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </nav>
+
+    <section class="hero section" id="home" data-parallax="0.3">
+        <div class="hero-inner">
+            <div class="hero-content reveal">
+                <div class="status"><span class="status-dot"></span>Available for projects</div>
+                <h1 class="hero-title">Hey, I'm <span class="highlight">Nimit</span></h1>
+                <p class="hero-sub"><span class="typed" id="typed"></span><span class="typed-cursor">|</span></p>
+                <p class="hero-bio">
+                    <span class="bio-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 6v6l4 2" />
+                        </svg>15 years old</span>
+                    <span class="bio-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                            <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                        </svg>Class 10th</span>
+                    <span class="bio-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg>Building cool stuff</span>
+                </p>
+                <div class="hero-stats">
+                    <div class="stat tilt-card" data-tilt>
+                        <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" />
+                                <path d="M8 21h8M12 17v4" />
+                            </svg></div><span class="stat-num">2+</span><span class="stat-label">Years Coding</span>
+                    </div>
+                    <div class="stat tilt-card" data-tilt>
+                        <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                                <path d="M2 12h20" />
+                            </svg></div><span class="stat-num">∞</span><span class="stat-label">Goals Scored</span>
+                    </div>
+                    <div class="stat tilt-card" data-tilt>
+                        <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M17 8h1a4 4 0 1 1 0 8h-1M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8zM6 1v3M10 1v3M14 1v3" />
+                            </svg></div><span class="stat-num">999+</span><span class="stat-label">Cups of Chai</span>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn primary"><span>Get in Touch</span><svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg></a>
+                    <a href="#about" class="btn secondary"><span>Learn More</span><svg viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14M5 12l7 7 7-7" />
+                        </svg></a>
+                </div>
+            </div>
+            <div class="hero-visual reveal">
+                <div class="avatar-wrap tilt-card" data-tilt data-tilt-max="15">
+                    <div class="avatar-glow"></div>
+                    <div class="avatar-ring"></div>
+                    <img src="avatar.png" alt="Nimit Mishra" class="avatar-img">
+                    <div class="avatar-status"><span class="live-dot"></span>Online</div>
+                </div>
+                <div class="float-icons">
+                    <div class="float-icon f1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                        </svg></div>
+                    <div class="float-icon f2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg></div>
+                    <div class="float-icon f3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                        </svg></div>
+                    <div class="float-icon f4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="6" y="3" width="12" height="18" rx="2" />
+                            <path d="M12 18h.01" />
+                        </svg></div>
+                </div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-cta"><span>Scroll</span><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M5 12l7 7 7-7" />
+            </svg></a>
+    </section>
+
+    <section class="about section" id="about" data-parallax="0.2">
+        <div class="section-label reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 16v-4M12 8h.01" />
+            </svg><span>Get to know me</span></div>
+        <h2 class="section-title reveal">About Me<span class="dot">.</span></h2>
+        <div class="about-grid">
+            <div class="card card-main tilt-card reveal" data-tilt data-tilt-max="8">
+                <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                        <circle cx="12" cy="7" r="4" />
+                    </svg></div>
+                <h3>The Vibe Check</h3>
+                <p>Hey! I'm <strong>Nimit</strong>, a 15-year-old developer from India who's passionate about creating
+                    awesome web experiences. When I'm not debugging code at 3am, you'll find me on the football field or
+                    standing up for my friends.</p>
+                <div class="card-tags"><span>#web_dev</span><span>#footballer</span><span>#chai_lover</span></div>
+            </div>
+            <div class="card tilt-card reveal" data-tilt>
+                <div class="card-emoji"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                        <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                    </svg></div>
+                <h4>Student Life</h4>
+                <p>Class 10th grind</p>
+            </div>
+            <div class="card tilt-card reveal" data-tilt>
+                <div class="card-emoji"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg></div>
+                <h4>Night Owl</h4>
+                <p>Best code at 2am</p>
+            </div>
+            <div class="card card-accent tilt-card reveal" data-tilt>
+                <div class="card-emoji"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                    </svg></div>
+                <h4>Loyal Friend</h4>
+                <p>Always got your back</p>
+            </div>
+            <div class="card tilt-card reveal" data-tilt>
+                <div class="card-emoji"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="6" width="20" height="12" rx="2" />
+                        <path d="M6 12h4M14 12h4M12 6v12" />
+                    </svg></div>
+                <h4>Gamer Mode</h4>
+                <p>When code breaks</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills section" id="skills" data-parallax="0.15">
+        <div class="section-label reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg><span>What I bring</span></div>
+        <h2 class="section-title reveal">My Skills<span class="dot">.</span></h2>
+        <div class="skills-grid">
+            <div class="skill skill-main tilt-card reveal" data-tilt>
+                <div class="skill-icon js"><svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z" />
+                    </svg></div>
+                <div class="skill-info">
+                    <h3>JavaScript</h3>
+                    <p>Making websites interactive</p>
+                    <div class="bar">
+                        <div class="fill" data-level="80"></div><span>80%</span>
+                    </div>
+                </div>
+                <span class="skill-badge">Expert</span>
+            </div>
+            <div class="skill tilt-card reveal" data-tilt>
+                <div class="skill-icon web"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <path
+                            d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                    </svg></div>
+                <div class="skill-info">
+                    <h3>Web Development</h3>
+                    <p>HTML & CSS mastery</p>
+                    <div class="bar">
+                        <div class="fill" data-level="85"></div><span>85%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="skill tilt-card reveal" data-tilt>
+                <div class="skill-icon sport"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20" />
+                    </svg></div>
+                <div class="skill-info">
+                    <h3>Football</h3>
+                    <p>CR7 aspirations</p>
+                    <div class="bar">
+                        <div class="fill" data-level="90"></div><span>90%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="skill skill-accent tilt-card reveal" data-tilt>
+                <div class="skill-icon loyal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg></div>
+                <div class="skill-info">
+                    <h3>Got Your Back</h3>
+                    <p>Loyalty unmatched</p>
+                    <div class="bar">
+                        <div class="fill" data-level="100"></div><span>100%</span>
+                    </div>
+                </div>
+                <span class="skill-badge fire">Max</span>
+            </div>
+        </div>
+        <div class="skills-extra reveal"><span>Also experienced in:</span>
+            <div class="extra-list"><span>UI Design</span><span>Problem Solving</span><span>Team
+                    Collaboration</span><span>Quick Learning</span></div>
+        </div>
+    </section>
+
+    <section class="contact section" id="contact" data-parallax="0.1">
+        <div class="contact-inner">
+            <div class="section-label reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                </svg><span>Get in touch</span></div>
+            <h2 class="contact-title reveal">Let's Create Something<br><span class="highlight">Amazing Together</span>
+            </h2>
+            <p class="contact-desc reveal">Got a project idea? Want to collaborate? Or just want to say hi? Feel free to
+                reach out – I'd love to hear from you!</p>
+            <a href="mailto:nimitmishradc@gmail.com" class="email-card tilt-card reveal" data-tilt data-tilt-max="5">
+                <div class="email-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <polyline points="22,6 12,13 2,6" />
+                    </svg></div>
+                <div class="email-info"><span class="email-label">Email me at</span><span
+                        class="email-addr">nimitmishradc@gmail.com</span></div>
+                <svg class="email-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+            </a>
+            <a href="mailto:nimitmishradc@gmail.com" class="btn primary lg reveal"><span>Send a Message</span><svg
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="22" y1="2" x2="11" y2="13" />
+                    <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                </svg></a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <a href="#" class="footer-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                </svg><span>NIMIT</span></a>
+            <p class="footer-tagline">Built with passion & dedication</p>
+            <p class="footer-copy">© 2026 Nimit Mishra. All rights reserved.</p>
+            <p class="footer-easter">Psst... try typing "game" 🎮</p>
+        </div>
+    </footer>
+
+    <div class="game-modal" id="gameModal">
+        <div class="game-container">
+            <button class="game-close" id="gameClose">×</button>
+            <h3>🎮 Nimit's Snake Game</h3>
+            <canvas id="snakeGame" width="300" height="300"></canvas>
+            <p class="game-score">Score: <span id="score">0</span></p>
+            <p class="game-hint">Use arrow keys or WASD to play!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
